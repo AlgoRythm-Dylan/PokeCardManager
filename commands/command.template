@@ -1,0 +1,11 @@
+from lib.command import Command
+
+class XCommand(Command):
+
+    def __init__(self, app):
+        super().__init__(app)
+        self.primary_command = "x"
+        self.description = "x command"
+
+def import_to(command_manager):
+    command_manager.add_command(XCommand(command_manager.app))
